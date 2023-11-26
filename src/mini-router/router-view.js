@@ -33,8 +33,8 @@ export default defineComponent({
       const route = routes.find((route) => route.path === unref(current))
 
       if (route) {
-        // typeof 同步组件 function
-        // typeof 异步组件 object
+        // typeof 同步组件 object
+        // typeof 异步组件 function
         component =
           typeof route.component === 'function'
             ? defineAsyncComponent(route.component)
